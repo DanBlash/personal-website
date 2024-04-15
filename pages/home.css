@@ -10,30 +10,16 @@ html {
 }
 
 #title-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     margin-top: 3rem;
-    --glow-color: rgb(255, 241, 176);
-    --glow-spread-color: rgba(255, 246, 123, 0.781);
-    --enhanced-glow-color: rgb(255, 246, 206);
-    --btn-color: rgb(0, 0, 0);
-    border: .25em solid var(--glow-color);
-    padding: 1em 3em;
-    color: var(--glow-color);
-    font-size: 18px;
-    font-weight: bold;
-    background-color: var(--btn-color);
-    border-radius: 1em;
-    outline: none;
-    box-shadow: 0 0 1em .25em var(--glow-color),
-           0 0 4em 1em var(--glow-spread-color),
-           inset 0 0 .75em .25em var(--glow-color);
-    text-shadow: 0 0 .2em var(--glow-color);
-    position: relative;
-    transition: all 0.3s;
    }
+
  h1 {
     text-align: center;
     color: rgb(255, 241, 176);
-    animation: fade-in 2.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1.5s both;
+    animation: fade-in 2.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
  }
 
  .fade-in {
@@ -88,3 +74,54 @@ html {
     box-shadow: 0px 0px 30px 1px rgb(255, 241, 176);
    }
    
+   .card:hover::after { 
+        pointer-events: none;
+        content: "";
+        position: absolute;
+        top: 80%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(255, 241, 176, .3);
+        filter: blur(2em);
+        opacity: .7;
+        transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+       }
+
+   #knowledge-card{
+    animation: puff-in-center 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) 3s both;
+   }
+
+   #about-card{
+    animation: puff-in-center 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) 3.5s both;
+   }
+
+   #social-card{
+    animation: puff-in-center 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) 4s both;
+   }
+
+   .card-title {
+    animation: fade-in 2.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) 5s both;
+   }
+
+
+
+
+
+   .puff-in-center {
+	animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) 1s both;
+}
+
+@keyframes puff-in-center {
+    0% {
+      transform: scale(2);
+      filter: blur(4px);
+      opacity: 0;
+    }
+    100% {
+      transform: scale(1);
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+  
