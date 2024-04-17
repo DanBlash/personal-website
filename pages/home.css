@@ -12,34 +12,27 @@ html {
 #title-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin-top: 3rem;
+    justify-content: left;
+    margin-top: 1rem;
+    margin-left: 5rem;
    }
 
- h1 {
-    text-align: center;
-    color: rgb(255, 241, 176);
-    animation: fade-in 2.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
+   .title {
+    font-size: 5rem;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
  }
 
- .fade-in {
-	animation: fade-in 1.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
-}
 
-@keyframes fade-in {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
+
 
   #card-container {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 5rem;
+    -webkit-perspective: 1000;
   }
 
   .card {
@@ -49,7 +42,7 @@ html {
     margin: 2rem;
     width: 190px;
     height: 254px;
-    background-image: linear-gradient(163deg, rgb(255, 241, 176) 0%, rgb(255, 255, 255) 100%);
+    background-image: linear-gradient(163deg, rgb(255, 255, 255) 0%, rgb(70, 70, 70) 100%);
     border-radius: 20px;
     transition: all .3s;
    }
@@ -71,7 +64,7 @@ html {
    }
    
    .card:hover {
-    box-shadow: 0px 0px 30px 1px rgb(255, 241, 176);
+    box-shadow: 0px 0px 30px 1px rgb(255, 255, 255);
    }
    
    .card:hover::after { 
@@ -82,44 +75,56 @@ html {
         left: 0;
         height: 100%;
         width: 100%;
-        background-color: rgba(255, 241, 176, .3);
+        background-color: rgba(172, 172, 172, 0.3);
         filter: blur(2em);
         opacity: .7;
         transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
        }
 
    #knowledge-card{
-    animation: puff-in-center 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) 3s both;
+        animation: slide-in-bck-center 0.7s cubic-bezier(0.6, 0.1, 0.6, 0.9) 3s both;
    }
 
    #about-card{
-    animation: puff-in-center 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) 3.5s both;
-   }
+        animation: slide-in-bck-center 0.7s cubic-bezier(0.6, 0.1, 0.6, 0.9) 3.2s both;
+    }
 
    #social-card{
-    animation: puff-in-center 0.5s cubic-bezier(0.470, 0.000, 0.745, 0.715) 4s both;
-   }
+        animation: slide-in-bck-center 0.7s cubic-bezier(0.6, 0.1, 0.6, 0.9) 3.4s both;
+    }
 
    .card-title {
-    animation: fade-in 2.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) 5s both;
+    color: white;
+    animation: fade-in 2.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) 4.5s both;
    }
 
 
-
-
-
-   .puff-in-center {
-	animation: puff-in-center 0.7s cubic-bezier(0.470, 0.000, 0.745, 0.715) 1s both;
-}
-
-@keyframes puff-in-center {
+@keyframes slide-in-bck-center {
     0% {
-      transform: scale(2);
-      filter: blur(4px);
+      transform: translateZ(750px);
       opacity: 0;
     }
     100% {
-      transform: scale(1);
+      transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes text-focus-in {
+    0% {
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
       filter: blur(0px);
       opacity: 1;
     }

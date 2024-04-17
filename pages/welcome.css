@@ -5,10 +5,12 @@ html {
 body {
     display: flex;
     margin: 0;
-    height: 762px;
+    height: 780px;
     align-items: center;
     justify-content: center;
+    -webkit-perspective: 1000;
 }
+
   
 .fade-in {
 	animation: fade-in 1.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
@@ -24,10 +26,10 @@ body {
   }
 
   #welcome-Button {
-    --glow-color: rgb(255, 241, 176);
-    --glow-spread-color: rgba(255, 246, 123, 0.781);
-    --enhanced-glow-color: rgb(255, 246, 206);
-    --btn-color: rgb(136, 118, 61);
+    --glow-color: rgb(255, 255, 255);
+    --glow-spread-color: rgba(230, 230, 230, 0.781);
+    --enhanced-glow-color: rgb(170, 170, 170);
+    --btn-color: rgb(145, 145, 145);
     border: .25em solid var(--glow-color);
     padding: 1em 3em;
     color: var(--glow-color);
@@ -71,3 +73,33 @@ body {
            0 0 2.5em 2em var(--glow-spread-color),
            inset 0 0 .5em .25em var(--glow-color);
    }
+
+   #welcome-Button:hover::after {
+    pointer-events: none;
+    content: "";
+    position: absolute;
+    top: 120%;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: var(--glow-spread-color);
+    filter: blur(2em);
+    opacity: .9;
+    transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+   } 
+
+     .slide-out-fwd-center {
+	animation: slide-out-fwd-center 0.7s cubic-bezier(0.6, 0.1, 0.6, 0.9) both;
+}
+
+@keyframes slide-out-fwd-center {
+    0% {
+      transform: translateZ(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateZ(900px);
+      opacity: 0;
+
+    }
+  }
