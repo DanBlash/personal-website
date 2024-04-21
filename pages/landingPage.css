@@ -1,0 +1,203 @@
+html {
+    background: black;
+}
+
+
+.cinzel-font {
+  font-family: Cinzel;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+#title-container {
+    display: flex;
+    justify-content: left;
+    margin-top: 1rem;
+    margin-left: 5rem;
+   }
+
+.title {
+    flex-wrap: wrap;
+    font-size: 12rem;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    border-bottom: 1px solid whitesmoke;
+ }
+
+.about-me-title{
+  display: none;
+  justify-content: end;
+  align-items: end;
+  font-size: 3rem;
+  color: rgb(134, 134, 134);
+}
+
+.about-me-text-container, .about-me-text-container2{
+  display: flex;
+  justify-content: end;
+  -webkit-perspective: 1000;
+}
+.about-me-text, .about-me-text2{
+  display: none;
+  justify-content: end;
+  text-align: end;
+  width: 70%;
+  flex-wrap: wrap;
+  color: rgb(134, 134, 134);
+}
+
+  /* #card-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5rem;
+    -webkit-perspective: 1000;
+  }
+
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    width: 190px;
+    height: 254px;
+    background-image: linear-gradient(163deg, rgb(255, 255, 255) 0%, rgb(70, 70, 70) 100%);
+    border-radius: 20px;
+    transition: all .3s;
+   }
+   
+   .card2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 190px;
+    height: 254px;
+    background-color: #1a1a1a;
+    border-radius: 18px;
+    transition: all .2s;
+   }
+   
+   .card2:hover {
+    transform: scale(0.98);
+    border-radius: 20px;
+   }
+   
+   .card:hover {
+    box-shadow: 0px 0px 30px 1px rgb(255, 255, 255);
+   }
+   
+   .card:hover::after { 
+        pointer-events: none;
+        content: "";
+        position: absolute;
+        top: 80%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(172, 172, 172, 0.3);
+        filter: blur(2em);
+        opacity: .7;
+        transform: perspective(1.5em) rotateX(35deg) scale(1, .6);
+       }
+
+   #knowledge-card{
+        animation: slide-in-bck-center 0.7s cubic-bezier(0.6, 0.1, 0.6, 0.9) 3s both;
+   }
+
+   #about-card{
+        animation: slide-in-bck-center 0.7s cubic-bezier(0.6, 0.1, 0.6, 0.9) 3.2s both;
+    }
+
+   #social-card{
+        animation: slide-in-bck-center 0.7s cubic-bezier(0.6, 0.1, 0.6, 0.9) 3.4s both;
+    }
+
+   .card-title {
+    color: white;
+    animation: fade-in 2.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) 4.5s both;
+   } */
+
+.fade-in{
+   animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@keyframes slide-in-bck-center {
+    0% {
+      transform: translateZ(750px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateZ(0);
+      opacity: 1;
+    }
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
+  @keyframes text-focus-in {
+    0% {
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100% {
+      filter: blur(0px);
+      opacity: 1;
+    }
+  }
+
+  .slide-in-bottom {
+            animation: slide-in-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) .5s both;
+  }
+
+  @keyframes slide-in-bottom {
+    0% {
+      -webkit-transform: translateY(1000px);
+              transform: translateY(1000px);
+      opacity: 0;
+    }
+    100% {
+      -webkit-transform: translateY(0);
+              transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+
+
+  @media (min-width: 768px) {
+    /* Styles for screens wider than 768px */
+  }
+  
+  @media (max-width: 480px) {
+    /* Styles for screens narrower than 480px (typically mobile) */
+    #title-container{
+      max-width: 480px;
+    }
+
+    .about-me-text-container{
+      max-width: 480px;
+    }
+
+    .about-me-text, .about-me-text2{
+      width: 100%;
+      text-align: left;
+    }
+
+    .title{
+      font-size: 5rem;
+      max-width: 480px;
+    }
+
+    .about-me-title{
+      font-size: 2.5rem;
+    }
+  }

@@ -9,11 +9,11 @@ app.use(express.static(directoryPath));
 
 
 app.get("/", (req, res) => {
-    res.sendFile(path.join(directoryPath, "welcome.html"));
+    res.sendFile(path.join(directoryPath, "home.html"));
 })
 
 app.get("/home", (req, res) => {
-    res.sendFile(path.join(directoryPath, "home.html"))
+    res.sendFile(path.join(directoryPath, "landingPage.html"))
 })
 
 app.get("/knowledge", (req, res) => {

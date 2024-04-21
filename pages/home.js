@@ -1,19 +1,14 @@
+const welcomeButton = document.getElementById("welcome-Button");
+const buttonContainer = document.querySelector(".container");
 
+welcomeButton.addEventListener("click", () => {
+    if (!buttonContainer.classList.contains("slide-out-fwd-center")) {
+        buttonContainer.classList.toggle("slide-out-fwd-center");
+    }
+    setTimeout(() => {
+        window.location.href = "landingPage.html";
+    }, 1000);
 
-const knowledgeButton = document.getElementById("knowledge-card");
-
-knowledgeButton.addEventListener("click", () => {
-    window.location.href = "knowledge.html";
+    
 })
 
-const aboutButton = document.getElementById("about-card");
-
-aboutButton.addEventListener("click", () => {
-    window.location.href = "about.html";
-})
-
-const socialButton = document.getElementById("social-card");
-
-socialButton.addEventListener("click", () => {
-    window.location.href = "social.html";
-})
