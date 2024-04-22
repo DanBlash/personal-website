@@ -2,6 +2,7 @@
 const aboutMeTitle = document.querySelector(".about-me-title");
 const aboutMeText = document.querySelector(".about-me-text");
 const aboutMeText2 = document.querySelector(".about-me-text2");
+const knowledgeTitle = document.querySelector(".knowledge-title");
 
 
 window.addEventListener("scroll", () =>{
@@ -62,6 +63,28 @@ if (window.innerHeight < 850) {
 })
 }
 
+
+if (window.innerHeight < 850) {
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 700) {
+            knowledgeTitle.style.display= "flex";
+            knowledgeTitle.classList.add("slide-in-bottom"); 
+        } else if (window.scrollY > 500) {
+            knowledgeTitle.style.display= "none";
+            knowledgeTitle.classList.remove("fade-in");
+        }
+    })
+    } else {
+        window.addEventListener("scroll", () => {
+        if (window.scrollY > 150) {
+            knowledgeTitle.style.display= "flex";
+            knowledgeTitle.classList.add("slide-in-bottom"); 
+        } else if (window.scrollY > 500) {
+            knowledgeTitle.style.display= "none";
+            knowledgeTitle.classList.remove("fade-in");
+        }
+    })
+    }
 
 // const knowledgeButton = document.getElementById("knowledge-card");
 

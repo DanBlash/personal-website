@@ -13,7 +13,7 @@ html {
     display: flex;
     justify-content: left;
     margin-top: 1rem;
-    margin-left: 5rem;
+    margin-left: 3rem;
    }
 
 .title {
@@ -23,6 +23,10 @@ html {
     color: rgb(255, 255, 255);
     animation: text-focus-in 1.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
     border-bottom: 1px solid whitesmoke;
+ }
+
+ .about-me-title-container{
+  margin-right: 3rem;
  }
 
 .about-me-title{
@@ -44,6 +48,18 @@ html {
   text-align: start;
   width: 90%;
   flex-wrap: wrap;
+  color: rgb(134, 134, 134);
+}
+
+.knowledge-title-container{
+  margin-right: 3rem;
+ }
+
+ .knowledge-title{
+  display: none;
+  justify-content: end;
+  align-items: end;
+  font-size: 3rem;
   color: rgb(134, 134, 134);
 }
 
@@ -179,15 +195,17 @@ html {
       justify-content: flex-start;
     }
 
-    .about-me-text, .about-me-text2{
-      font-size: 3rem;
-    }
+    
 
     .title{
       font-size: 7.5rem;
     }
 
     .about-me-title{
+      font-size: 5rem;
+    }
+
+    .knowledge-title{
       font-size: 5rem;
     }
   }

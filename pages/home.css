@@ -11,6 +11,13 @@ body {
     -webkit-perspective: 1000;
 }
 
+
+.cinzel-font {
+  font-family: Cinzel;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
   
 .fade-in {
 	animation: fade-in 1.8s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
@@ -33,8 +40,7 @@ body {
     border: .25em solid var(--glow-color);
     padding: 1em 3em;
     color: var(--glow-color);
-    font-size: 18px;
-    font-weight: bold;
+    font-size: 22px;
     background-color: var(--btn-color);
     border-radius: 1em;
     outline: none;
