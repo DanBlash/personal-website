@@ -40,7 +40,8 @@ body {
     border: .25em solid var(--glow-color);
     padding: 1em 3em;
     color: var(--glow-color);
-    font-size: 22px;
+    font-size: 18px;
+    font-weight: 600;
     background-color: var(--btn-color);
     border-radius: 1em;
     outline: none;

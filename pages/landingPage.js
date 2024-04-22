@@ -69,7 +69,7 @@ if (window.innerHeight < 850) {
         if (window.scrollY > 700) {
             knowledgeTitle.style.display= "flex";
             knowledgeTitle.classList.add("slide-in-bottom"); 
-        } else if (window.scrollY > 500) {
+        } else if (window.scrollY > 400) {
             knowledgeTitle.style.display= "none";
             knowledgeTitle.classList.remove("fade-in");
         }
@@ -79,7 +79,7 @@ if (window.innerHeight < 850) {
         if (window.scrollY > 150) {
             knowledgeTitle.style.display= "flex";
             knowledgeTitle.classList.add("slide-in-bottom"); 
-        } else if (window.scrollY > 500) {
+        } else if (window.scrollY > 750) {
             knowledgeTitle.style.display= "none";
             knowledgeTitle.classList.remove("fade-in");
         }
