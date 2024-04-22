@@ -17,17 +17,41 @@ window.addEventListener("scroll", () =>{
 })
 
 
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 150) {
-        aboutMeText.style.display= "flex";
-        aboutMeText.classList.add("slide-in-bottom"); 
-    } else if (window.scrollY > 500) {
-        aboutMeText.style.display= "none";
-        aboutMeText.classList.remove("fade-in");
+if (window.innerHeight < 850) {
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 100) {
+            aboutMeText.style.display= "flex";
+            aboutMeText.classList.add("slide-in-bottom"); 
+        } else if (window.scrollY > 500) {
+            aboutMeText.style.display= "none";
+            aboutMeText.classList.remove("fade-in");
+        }
+    })
+    } else {
+        window.addEventListener("scroll", () => {
+        if (window.scrollY > 150) {
+            aboutMeText.style.display= "flex";
+            aboutMeText.classList.add("slide-in-bottom"); 
+        } else if (window.scrollY > 500) {
+            aboutMeText.style.display= "none";
+            aboutMeText.classList.remove("fade-in");
+        }
+    })
     }
-})
 
-window.addEventListener("scroll", () => {
+
+if (window.innerHeight < 850) {
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 500) {
+            aboutMeText2.style.display= "flex";
+            aboutMeText2.classList.add("slide-in-bottom"); 
+        } else if (window.scrollY > 2500) {
+            aboutMeText2.style.display= "none";
+            aboutMeText2.classList.remove("fade-in");
+        }
+    })
+} else {
+    window.addEventListener("scroll", () => {
     if (window.scrollY > 200) {
         aboutMeText2.style.display= "flex";
         aboutMeText2.classList.add("slide-in-bottom"); 
@@ -36,6 +60,9 @@ window.addEventListener("scroll", () => {
         aboutMeText2.classList.remove("fade-in");
     }
 })
+}
+
+
 // const knowledgeButton = document.getElementById("knowledge-card");
 
 // knowledgeButton.addEventListener("click", () => {

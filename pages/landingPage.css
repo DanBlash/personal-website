@@ -2,7 +2,6 @@ html {
     background: black;
 }
 
-
 .cinzel-font {
   font-family: Cinzel;
   font-optical-sizing: auto;
@@ -36,14 +35,14 @@ html {
 
 .about-me-text-container, .about-me-text-container2{
   display: flex;
-  justify-content: end;
+  justify-content: flex-start;
   -webkit-perspective: 1000;
 }
 .about-me-text, .about-me-text2{
   display: none;
-  justify-content: end;
-  text-align: end;
-  width: 70%;
+  justify-content: flex-start;
+  text-align: start;
+  width: 90%;
   flex-wrap: wrap;
   color: rgb(134, 134, 134);
 }
@@ -172,18 +171,35 @@ html {
   }
   
 
-
-  @media (min-width: 768px) {
+  @media (max-width: 768px) {
     /* Styles for screens wider than 768px */
+
+    .about-me-text-container, .about-me-text-container2{
+      max-width: 90%;
+      justify-content: flex-start;
+    }
+
+    .about-me-text, .about-me-text2{
+      font-size: 3rem;
+    }
+
+    .title{
+      font-size: 7.5rem;
+    }
+
+    .about-me-title{
+      font-size: 5rem;
+    }
   }
+
   
-  @media (max-width: 480px) {
+  @media (max-width: 600px) {
     /* Styles for screens narrower than 480px (typically mobile) */
     #title-container{
       max-width: 480px;
     }
 
-    .about-me-text-container{
+    .about-me-text-container, .about-me-text-container2{
       max-width: 480px;
     }
 
@@ -200,4 +216,6 @@ html {
     .about-me-title{
       font-size: 2.5rem;
     }
-  }
+  }  
+  
+  
